@@ -5,7 +5,7 @@ import PageNotFound from "./pages/errors/NotFound";
 
 const Routers: React.FC = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.REACT_APP_ROOT}>
             <Routes>
                 <Route path="/" index element={<Dashboard />} />
 

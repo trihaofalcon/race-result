@@ -22,7 +22,8 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+import { Bar } from "react-chartjs-2";
+import {IData, IGrand, IDataChart} from "../types";
 
 const crawlData = require("../data/crawl-data");
 
@@ -59,18 +60,6 @@ const defineCharts = {
     team: {name: "Team|Grand Prix", value: "Pts"}
 };
 
-interface iData {
-    year: string | keyof typeof crawlData,
-    type: string,
-    grand: string
-}
-
-interface iGrand {
-    name: string,
-    title: string,
-    result: any[]
-}
-
 function splitString(str, splitLast = false) {
     str = str.replaceAll(/\n|\t/g, "").replaceAll(/\s+/g, " ").trim();
     return splitLast
@@ -79,23 +68,23 @@ function splitString(str, splitLast = false) {
 }
 
 const Dashboard: React.FC = () => {
-    const [data, setData] = useState<iData>({
+    const [data, setData] = useState<IData>({
         year: "2023",
         type: "races",
         grand: ""
     });
     const [dataYears, setDataYears] = useState<string[]>([]);
-    const [dataGrand, setDataGrand] = useState<iGrand[]>([]);
+    const [dataGrand, setDataGrand] = useState<IGrand[]>([]);
     const [dataResults, setDataResults] = useState<object[]>([]);
     const [dataColumns, setDataColumns] = useState<string[]>([]);
-    const [dataChart, setDataChart] = useState<any>({
+    const [dataChart, setDataChart] = useState<IDataChart>({
         labels: [],
         datasets: [],
     });
 
     useEffect(() => {
         //Get years data..
-        let years = Object.keys(crawlData);
+        let years: string[] = Object.keys(crawlData);
         setDataYears(years.sort().reverse());
     }, []);
 
