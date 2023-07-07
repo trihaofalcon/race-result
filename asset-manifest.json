@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/race-result/static/css/main.87f404dc.css",
+    "main.js": "/race-result/static/js/main.0ecbf211.js",
+    "index.html": "/race-result/index.html",
+    "main.87f404dc.css.map": "/race-result/static/css/main.87f404dc.css.map",
+    "main.0ecbf211.js.map": "/race-result/static/js/main.0ecbf211.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87f404dc.css",
+    "static/js/main.0ecbf211.js"
+  ]
+}
