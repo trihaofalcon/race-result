@@ -1,6 +1,12 @@
 # "Race Result" project
 
-This test project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+* **Use script in file to get data: `src/services/crawl-data.js`**
+
+* **The data is saved as json at: `src/data/crawl-data.json`**
+
+* **Example: [Link](https://trihaofalcon.github.io/race-result)**
 
 ## Available Scripts
 
